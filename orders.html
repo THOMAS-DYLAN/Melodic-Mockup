@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Cart — Melodic Artisan</title>
+<title>Order History — Melodic Artisan</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -13,30 +13,22 @@
 
 <div class="page-header">
   <div class="page-header-inner container">
-    <div class="page-eyebrow">Your Cart</div>
-    <h1 class="page-title">Ready to <em>order?</em></h1>
+    <div class="page-eyebrow">Purchase History</div>
+    <h1 class="page-title">Your complete <em>order</em><br>history.</h1>
   </div>
 </div>
 
-<div class="container">
-  <div class="cart-layout" id="cart-layout" style="padding:44px 0 70px;">
-    <!-- populated by js/cartpage.js -->
-  </div>
+<div class="container" style="padding:8px 28px 80px;">
+  <div class="stat-bar" id="orders-summary"></div>
+  <div id="orders-list" style="margin-top:8px;"></div>
 </div>
 
 <div id="footer-mount"></div>
-
-<div class="modal-overlay" id="checkout-modal">
-  <div class="modal-box wide" id="checkout-box">
-    <!-- populated by js/checkoutmodal.js -->
-  </div>
-</div>
 
 <script src="js/data.js"></script>
 <script src="js/cart.js"></script>
 <script src="js/orders.js"></script>
 <script src="js/site.js"></script>
-<script src="js/cartpage.js"></script>
-<script src="js/checkoutmodal.js"></script>
+<script src="js/orderslist.js"></script>
 </body>
 </html>

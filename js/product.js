@@ -108,7 +108,7 @@ function renderProduct() {
           <div class="name">Melodic Artisan Factory</div>
           <div class="meta">${SHOP.location} · 4.9★ (${SHOP.reviewCount.toLocaleString()}) · ${SHOP.sales.toLocaleString()} sales</div>
         </div>
-        <button class="btn btn-outline" disabled title="Mockup — messaging isn't wired up">Message</button>
+        <button class="btn btn-outline" disabled title="Messaging is coming soon">Message</button>
       </div>
     </div>
   `;
@@ -160,4 +160,7 @@ function renderProduct() {
   renderRelated(product);
 }
 
-document.addEventListener("DOMContentLoaded", renderProduct);
+document.addEventListener("DOMContentLoaded", () => {
+  initPage("shop");
+  renderProduct();
+});

@@ -4,62 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Melodic Artisan — Handmade Resin Keycaps &amp; Epoxy Lamps</title>
-<meta name="description" content="Mockup storefront for MelodicArtisan (Etsy) — handmade resin artisan keycaps and epoxy lamps from Hải Dương, Vietnam.">
+<meta name="description" content="Melodic Artisan — handmade resin keycaps and epoxy lamps, hand-poured in Hải Dương, Vietnam.">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="grain"></div>
+<div id="banner-mount"></div>
+<div id="nav-mount"></div>
 
-<div class="announce">✺ BUY 1 GET 1 FREE on marked listings — order any product, get a random keycap free, never a duplicate ✺</div>
-
-<header class="site">
-  <div class="header-row">
-    <a class="brand" href="index.html">
-      <img src="https://i.etsystatic.com/32520004/r/isla/58f06c/52537685/isla_500x500.52537685_kwtcnehc.jpg" alt="Melodic Artisan">
-      <div class="brand-text">
-        <div class="name">Melodic Artisan</div>
-        <div class="sub">Resin Workshop · Est. 2021</div>
-      </div>
-    </a>
-    <nav class="main-nav">
-      <a href="index.html" class="active">Shop</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#reviews">Reviews</a>
-      <a href="index.html#policies">Policies</a>
-    </nav>
-    <div class="header-actions">
-      <div class="search-box">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input id="search-input" type="text" placeholder="Search the shop…">
-      </div>
-      <a class="icon-btn" href="cart.html" aria-label="Cart">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-        <span class="cart-badge" data-cart-count>0</span>
-      </a>
-    </div>
-  </div>
-</header>
-
-<div class="container">
-  <div class="hero">
-    <div class="hero-media">
-      <img src="https://i.etsystatic.com/32520004/r/isbl/1b81f7/82657643/isbl_1680x420.82657643_6jaf0e0v.jpg" alt="Melodic Artisan workshop banner">
-      <div class="hero-copy">
-        <div>
-          <div class="badge-row">
-            <span class="pill star">★ Star Seller</span>
-            <span class="pill">Hải Dương, Vietnam</span>
-            <span class="pill teal">4 years on Etsy</span>
-          </div>
-          <h1>Handmade resin, <span class="accent">poured with patience.</span></h1>
-        </div>
-        <div class="hero-stats">
-          <div class="stat"><div class="num">23.2k</div><div class="lbl">Sales</div></div>
-          <div class="stat"><div class="num">4.9★</div><div class="lbl">5.5k reviews</div></div>
-          <div class="stat"><div class="num">384</div><div class="lbl">Listings</div></div>
-          <div class="stat"><div class="num">4.2k</div><div class="lbl">Admirers</div></div>
-        </div>
-      </div>
+<div class="page-header">
+  <div class="page-header-inner container">
+    <div class="page-eyebrow">All Products</div>
+    <h1 class="page-title">Handmade resin, <em>poured with patience.</em></h1>
+    <p class="page-desc">Hand-poured artisan keycaps and epoxy lamps out of a small workshop in Hải Dương, Vietnam. Every piece is cast, painted, and finished by hand — no two come out quite the same.</p>
+    <div class="badge-row" style="margin-top:20px;">
+      <span class="pill star">★ Top Rated Studio</span>
+      <span class="pill">23.2k Orders Shipped</span>
+      <span class="pill teal">4.9★ · 5,522 Reviews</span>
     </div>
   </div>
 </div>
@@ -67,7 +28,13 @@
 <div class="container">
   <div class="chip-row" id="chip-row"></div>
   <div class="toolbar">
-    <span class="result-count" id="result-count"></span>
+    <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;">
+      <div class="search-box" style="min-width:220px;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input id="search-input" type="text" placeholder="Search the shop…">
+      </div>
+      <span class="result-count" id="result-count"></span>
+    </div>
     <select class="sort" id="sort-select">
       <option value="featured">Sort: Featured</option>
       <option value="price-asc">Price: Low to High</option>
@@ -133,38 +100,12 @@
   </div>
 </section>
 
-<footer class="site" id="policies">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h4>Melodic Artisan</h4>
-        <p>Artisan Factory — Create products with passion. Handmade resin keycaps &amp; epoxy lamps out of Hải Dương, Vietnam.</p>
-        <div class="pay-icons">
-          <span>PayPal</span><span>Visa</span><span>Mastercard</span><span>Apple Pay</span><span>Klarna</span>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Shipping &amp; Returns</h4>
-        <p>Ships from Vietnam. Returns &amp; exchanges accepted within 30 days. Buyer covers return shipping and customs duties.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Shop Policies</h4>
-        <p>Cancellations are not accepted once production starts — message the shop right away if something's wrong.</p>
-      </div>
-      <div class="footer-col">
-        <h4>This Mockup</h4>
-        <p>A static demo build with no backend — cart data lives in your browser's local storage only. Built to preview a real storefront experience.</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Melodic Artisan — mockup build, not affiliated with Etsy Inc.</span>
-      <span>Source: etsy.com/shop/MelodicArtisan</span>
-    </div>
-  </div>
-</footer>
+<div id="footer-mount"></div>
 
 <script src="js/data.js"></script>
 <script src="js/cart.js"></script>
+<script src="js/orders.js"></script>
+<script src="js/site.js"></script>
 <script src="js/shop.js"></script>
 </body>
 </html>

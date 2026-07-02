@@ -1,7 +1,5 @@
 /* =========================================================
-   MELODIC ARTISAN — product data
-   Pulled from the live Etsy shop (etsy.com/shop/MelodicArtisan)
-   Real titles, real prices, real sale %, real shop photos.
+   MELODIC ARTISAN — product catalog
    No backend — this file IS the "database".
    ========================================================= */
 
@@ -10,12 +8,13 @@ const SHOP = {
   handle: "MelodicArtisan",
   tagline: "Artisan Factory — Create products with passion.",
   location: "Hải Dương, Vietnam",
-  sales: 23243,
+  founded: 2021,
+  ordersShipped: 23243,
   rating: 4.9,
   reviewCount: 5522,
-  yearsOnEtsy: 4,
-  admirers: 4211,
-  starSeller: true,
+  yearsInBusiness: 4,
+  subscribers: 4211,
+  topRated: true,
   ownerName: "Tuan Anh",
   ownerRole: "Owner, Maker, Designer",
   ownerBlurb: "My name is Tuan Anh, I am the owner of a handmade goods factory. I love art, especially products with epoxy resin material. I always try every day to make the product I make the best.",
@@ -36,7 +35,7 @@ const SHOP = {
     "https://i.etsystatic.com/isa/77418c/1036795821292/isa_760xN.1036795821292_jfj4.jpg"
   ],
   announcement: "BUY 1 GET 1 FREE on every listing marked \u201CBuy 1 Get 1 Free.\u201D Order any product and we'll toss in one random keycap on the house \u2014 never a duplicate. Thank you for visiting our little workshop!",
-  payments: ["PayPal", "Visa", "Mastercard", "Discover", "Apple Pay", "Klarna", "Etsy Gift Card"],
+  payments: ["PayPal", "Visa", "Mastercard", "Discover", "Apple Pay", "Klarna"],
   policies: {
     shipping: "Ships from Hải Dương, Vietnam. See each listing for estimated arrival \u2014 most resin lamps run 2\u20133 weeks, keycaps ship faster. Buyers are responsible for customs & import taxes.",
     returns: "Returns & exchanges accepted within 30 days of delivery. Buyer covers return shipping; items must come back in original condition.",
@@ -89,9 +88,9 @@ const ABOUT_GALLERY = [IMG.about1, IMG.about2, IMG.about3, IMG.about4, IMG.about
 
 function pick(pool, seed) { return pool[seed % pool.length]; }
 
-/* Each product: id (stable slug), listingId (real Etsy listing id, for the
-   "view on Etsy" link), title, price, originalPrice, category, image,
-   gallery[], badge, description, materials, variants[] */
+/* Each product: id (stable slug), listingId (internal SKU reference),
+   title, price, originalPrice, category, image, gallery[], badge,
+   description, materials, variants[] */
 const PRODUCTS = [
   {
     id: "spiderman-venom-lamp", listingId: "1610721664",
@@ -186,3 +185,69 @@ function pctOff(p) {
 function money(n) {
   return "$" + n.toFixed(2);
 }
+
+/* =========================================================
+   Order history — seeded sample history so the dashboard and
+   orders page have something real to show. New orders placed
+   through checkout are appended on top of this in localStorage.
+   ========================================================= */
+
+const ORDER_STATUS_STEPS = ["Processing", "Shipped", "Delivered"];
+
+const CUSTOMER = {
+  name: "Jordan Ellis",
+  email: "jordan.ellis@example.com",
+  memberSince: "2025-02-11",
+  address: { name: "Jordan Ellis", line1: "412 Birchwood Ave", city: "Kansas City", region: "MO", zip: "64105", country: "United States" }
+};
+
+const SEED_ORDERS = [
+  {
+    id: "MA-10482",
+    date: "2026-06-18",
+    status: "Delivered",
+    address: CUSTOMER.address,
+    items: [
+      { productId: "hollow-knight-lamp", variantLabel: "Medium (12cm)", unitPrice: 49.69, qty: 1 },
+      { productId: "koi-fish-keycap-set", variantLabel: "Set of 5 (random)", unitPrice: 9.94, qty: 1 }
+    ]
+  },
+  {
+    id: "MA-10391",
+    date: "2026-05-30",
+    status: "Delivered",
+    address: CUSTOMER.address,
+    items: [
+      { productId: "spiderman-venom-lamp", variantLabel: "Medium (14.4cm)", unitPrice: 73.44, qty: 1 }
+    ]
+  },
+  {
+    id: "MA-10233",
+    date: "2026-05-02",
+    status: "Delivered",
+    address: CUSTOMER.address,
+    items: [
+      { productId: "blue-koi-spacebar", variantLabel: "Standard", unitPrice: 13.12, qty: 1 },
+      { productId: "green-koi-spacebar", variantLabel: "Standard", unitPrice: 13.12, qty: 1 }
+    ]
+  },
+  {
+    id: "MA-10312",
+    date: "2026-06-24",
+    status: "Shipped",
+    address: CUSTOMER.address,
+    items: [
+      { productId: "master-sword-keycap", variantLabel: "Standard", unitPrice: 24.85, qty: 2 },
+      { productId: "halloween-artisan-keycap", variantLabel: "Standard", unitPrice: 24.85, qty: 1 }
+    ]
+  },
+  {
+    id: "MA-10095",
+    date: "2026-06-27",
+    status: "Processing",
+    address: CUSTOMER.address,
+    items: [
+      { productId: "miku-resin-lamp", variantLabel: "Standard", unitPrice: 30.31, qty: 1 }
+    ]
+  }
+];

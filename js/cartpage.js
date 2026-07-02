@@ -65,6 +65,9 @@ function renderCartPage() {
       renderCartPage();
     });
   });
+
+  const checkoutBtn = document.getElementById("checkout-btn");
+  if (checkoutBtn) checkoutBtn.addEventListener("click", () => window.openCheckoutModal && window.openCheckoutModal());
 }
 
 function handleCartClick(e) {
@@ -89,11 +92,6 @@ function handleCartClick(e) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  initPage("cart");
   renderCartPage();
-  const modal = document.getElementById("checkout-modal");
-  document.body.addEventListener("click", e => {
-    if (e.target.id === "checkout-btn") modal.classList.add("show");
-  });
-  document.getElementById("close-modal").addEventListener("click", () => modal.classList.remove("show"));
-  modal.addEventListener("click", e => { if (e.target === modal) modal.classList.remove("show"); });
 });

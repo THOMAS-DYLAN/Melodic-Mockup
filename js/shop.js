@@ -73,6 +73,7 @@ function buildChips() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  initPage("shop");
   buildChips();
   renderGrid();
 

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Cart — Melodic Artisan</title>
+<title id="page-title">Order Detail — Melodic Artisan</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -11,32 +11,24 @@
 <div id="banner-mount"></div>
 <div id="nav-mount"></div>
 
-<div class="page-header">
+<div class="page-header" style="padding:40px 0 28px;">
   <div class="page-header-inner container">
-    <div class="page-eyebrow">Your Cart</div>
-    <h1 class="page-title">Ready to <em>order?</em></h1>
+    <div class="page-eyebrow">Order Detail</div>
+    <h1 class="page-title" style="font-size:clamp(1.8rem,4vw,2.8rem);" id="order-page-title">Order</h1>
   </div>
 </div>
 
 <div class="container">
-  <div class="cart-layout" id="cart-layout" style="padding:44px 0 70px;">
-    <!-- populated by js/cartpage.js -->
-  </div>
+  <div id="confirm-banner-slot" style="padding-top:22px;"></div>
+  <div id="order-root" style="padding: 22px 0 70px;"></div>
 </div>
 
 <div id="footer-mount"></div>
-
-<div class="modal-overlay" id="checkout-modal">
-  <div class="modal-box wide" id="checkout-box">
-    <!-- populated by js/checkoutmodal.js -->
-  </div>
-</div>
 
 <script src="js/data.js"></script>
 <script src="js/cart.js"></script>
 <script src="js/orders.js"></script>
 <script src="js/site.js"></script>
-<script src="js/cartpage.js"></script>
-<script src="js/checkoutmodal.js"></script>
+<script src="js/orderdetail.js"></script>
 </body>
 </html>

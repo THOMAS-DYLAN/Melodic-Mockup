@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — Melodic Artisan</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="grain"></div>
+<div id="banner-mount"></div>
+<div id="nav-mount"></div>
+
+<div class="dash-header">
+  <div class="dash-header-inner container">
+    <div>
+      <div class="dash-greeting">Welcome back,<br><em id="dash-name">—</em></div>
+      <div class="dash-since" id="dash-since">Member since —</div>
+      <div class="quick-actions">
+        <a href="index.html" class="quick-btn quick-btn-primary btn-clip">Browse Shop →</a>
+        <a href="orders.html" class="quick-btn quick-btn-secondary">View All Orders</a>
+        <a href="cart.html" class="quick-btn quick-btn-secondary">View Cart</a>
+      </div>
+    </div>
+    <span class="member-badge">⬡ Resin Rewards Member</span>
+  </div>
+</div>
+
+<div class="container">
+  <div class="dash-grid">
+    <div class="panel">
+      <div class="panel-head">
+        <span class="panel-title">Recent Orders <span class="n">last 4</span></span>
+        <a href="orders.html">View all →</a>
+      </div>
+      <div id="orders-panel" style="padding:14px 20px;"></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <span class="panel-title">Account Information</span>
+      </div>
+      <div id="account-panel" style="padding:6px 20px;"></div>
+    </div>
+  </div>
+
+  <div class="stat-cards" style="margin-top:24px;">
+    <div class="stat-card">
+      <div class="lbl">Total Orders</div>
+      <div class="num" id="stat-orders">—</div>
+      <div class="sub">Lifetime</div>
+    </div>
+    <div class="stat-card">
+      <div class="lbl">Total Spent</div>
+      <div class="num" id="stat-spent">—</div>
+      <div class="sub">Across all orders</div>
+    </div>
+    <div class="stat-card">
+      <div class="lbl">Resin Rewards</div>
+      <div class="num" id="stat-points">—</div>
+      <div class="sub">Points · 500 = $5 off</div>
+    </div>
+  </div>
+</div>
+
+<div style="padding-bottom:60px;"></div>
+<div id="footer-mount"></div>
+
+<script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/orders.js"></script>
+<script src="js/site.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>
